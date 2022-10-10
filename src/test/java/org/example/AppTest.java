@@ -73,5 +73,18 @@ public class AppTest {
         assertFalse(parking.estAutorise(vehicule));
     }
 
+    @Test
+    public void vehiculePresent_sortieVehicule_VehiculePasDansLaListe() {
+        //Arranger
+        Parking parking = new Parking(10);
+        Vehicule vehicule = new Vehicule("AA-123-AA");
+        parking.autoriserVehicule(vehicule);
+        parking.entrer(vehicule);
+        //Agir
+        parking.sortir(vehicule);
+        //Assert
+        assertFalse(parking.estSurParking(vehicule));
+    }
+
 
 }
