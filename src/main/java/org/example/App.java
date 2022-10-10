@@ -8,6 +8,7 @@ public class App {
         parking.autoriserVehicule(clio);
         parking.entrer(clio);
         System.out.println(parking);
+
     }
     
 }
